@@ -18,7 +18,7 @@ namespace StudentServiceLib
             get => _score;
             set
             {
-                if (_score > 10)
+                if (value > 10)
                 {
                     throw new SystemException("Score must not exeed 10.0");
                 }

@@ -84,6 +84,21 @@ namespace TestProject1
             Assert.AreEqual('D', letter);
         }
 
+        [TestMethod]
+        public void scoreTest()
+        {
+            Student s = new Student();
+            bool isCatch = false;
+            try
+            {
+                s.Score = 19;
+            }
+            catch (Exception e)
+            {
+                isCatch = true;
+            }
 
+            Assert.IsTrue(isCatch);
+        }
     }
 }
