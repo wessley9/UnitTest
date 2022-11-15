@@ -100,5 +100,29 @@ namespace TestProject1
 
             Assert.IsTrue(isCatch);
         }
+
+        [TestMethod]
+        public void serviceTest()
+        {
+            StudentService s = new StudentService();
+            AddStudent(s);
+            Assert.AreEqual(2,s.size());
+        }
+
+        public void AddStudent(StudentService s)
+        {
+            Student s1 = new Student();
+            s1.Id = 1;
+            s1.Name= "Phanh";
+            s1.Age = 21;
+            s1.Score = 7;
+            Student s2 = new Student();
+            s1.Id = 2;
+            s2.Name = "Tan";
+            s2.Age = 21;
+            s2.Score = 6;
+            s.addStudent(s1);
+            s.addStudent(s2);
+        }
     }
 }
