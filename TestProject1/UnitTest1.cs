@@ -64,5 +64,26 @@ namespace TestProject1
 
             Assert.AreEqual('C', letter);
         }
+
+        [TestMethod]
+        public void WhenScore35_TheLetter_D()
+        {
+            Student s = new Student();
+            s.Score = 3.5;
+            char letter = s.getLetterScore();
+
+            Assert.AreEqual('D', letter);
+        }
+
+        public void WhenScoreBelow35_TheLetter_E()
+        {
+            Student s = new Student();
+            s.Score = 2;
+            char letter = s.getLetterScore();
+
+            Assert.AreEqual('D', letter);
+        }
+
+
     }
 }
