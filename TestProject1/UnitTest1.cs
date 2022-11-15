@@ -52,7 +52,17 @@ namespace TestProject1
             s.Score = 6;
             char letter = s.getLetterScore();
 
-            Assert.AreEqual('B', letter);
+            Assert.AreEqual('C', letter);
+        }
+
+        [TestMethod]
+        public void WhenScore5_TheLetter_C()
+        {
+            Student s = new Student();
+            s.Score = 5;
+            char letter = s.getLetterScore();
+
+            Assert.AreEqual('C', letter);
         }
     }
 }
